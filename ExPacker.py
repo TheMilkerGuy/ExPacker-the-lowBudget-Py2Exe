@@ -42,6 +42,7 @@ def package_script_and_modules(script_path, modules, base_exe_path):
         with open(script_dest, "w") as script_file:
             script_file.write(script_content)
             script_file.write("\nexit()")
+            script_file.write("\n#")
         
         for module, path in modules.items():
             if path and os.path.isfile(path):
